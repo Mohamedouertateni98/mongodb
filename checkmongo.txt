@@ -1,0 +1,44 @@
+1 - Mongo 
+2-use contact 
+3- db.createCollection('contactlist')
+4- db.contactlist.insertMany([{
+  
+  "Last name": "Ben Lahmer",
+  "First name": "Fares",
+  "Email": "fares@gmail.com",
+  "age": 26
+},
+{
+  
+  "Last name": "Kefi",
+  "First name": "Seif",
+  "Email": "Kefi@gmail.com",
+  "age": 15
+},
+
+{
+  
+  "Last name": "Fatnassi",
+  "First name": "Sarra",
+  "Email": "sarra.f@gmail.com",
+  "age": 40
+},
+  {
+  
+  "Last name": "Ben Yahia",
+  "First name": "Rym", 
+  "age": 4
+},
+{
+  
+  "Last name": "Cherif",
+  "First name": "Sami",
+  "age": 3
+}])
+
+5- db.contact.find({_id:ObjectId('6345ae50f4b2af8a280c6f')})
+6-db.contactlist.find({age:{$lt:18}})
+7-db.contactlist.find({age:{$gt:18}, "Last name ": {$regex : /.ah*.*/}})
+8-db.contactlist.updateOne({"First name " : "Seif "},$set{"First name" : "Anis}})
+9-db.contactlist.remove({age:$lt:5}})
+10-db.contactlist.find()
